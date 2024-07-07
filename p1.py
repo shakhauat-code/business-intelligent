@@ -157,7 +157,7 @@ def home_page():
     agent_dep = df2.groupby('Agent_id')['deposit'].sum().reset_index()
 
 
-    col8, col9 = st.columns([1, 1])
+    col8, sp, col9 = st.columns([1,1,1])
 
     with col8:
         # Plotly bar chart
@@ -183,7 +183,7 @@ def home_page():
             yaxis=dict(title='Number of Accounts'),
             template='plotly_white',
             width = 600,  # Set the width of the figure
-            height = 600  # Set the height of the figure
+            height = 500  # Set the height of the figure
         )
         # Display chart in Streamlit
         st.plotly_chart(fig)
@@ -212,7 +212,7 @@ def home_page():
             yaxis=dict(title='Deposit Amount'),
             template='plotly_white',
             width = 600,  # Set the width of the figure
-            height = 600  # Set the height of the figure
+            height = 500  # Set the height of the figure
         )
         # Display chart in Streamlit
         st.plotly_chart(fig)

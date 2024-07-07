@@ -219,7 +219,7 @@ def home_page():
 
     st.markdown('')
 
-    col10, col11 = st.columns([1, 1])
+    col10,sp2 col11 = st.columns([1,.1, 1])
     with col10:
         fig = go.Figure()
 
@@ -237,7 +237,9 @@ def home_page():
         # Update layout
         fig.update_layout(
             title='Deposit Amount by Agent ID',
-            template='plotly_white'
+            template='plotly_white',
+            width = 600,  # Set the width of the figure
+            height = 500  # Set the height of the figure
         )
 
         # Display chart in Streamlit

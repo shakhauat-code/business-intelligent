@@ -219,7 +219,7 @@ def home_page():
 
     st.markdown('')
 
-    col10,sp2 col11 = st.columns([1,.1, 1])
+    col10,sp2, col11 = st.columns([1,.1, 1])
     with col10:
         fig = go.Figure()
 

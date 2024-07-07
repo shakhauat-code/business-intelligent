@@ -245,6 +245,30 @@ def home_page():
         # Display chart in Streamlit
         st.plotly_chart(fig)
 
+    with col11:
+        fig = go.Figure()
+
+        # Add donut trace with data labels
+        fig.add_trace(go.Pie(
+            labels=agent_dep['Agent_id'],  # Labels for each donut section
+            values=agent_dep['deposit'],  # Values for each donut section
+            textinfo='label+percent',  # Show both label and percentage
+            textposition='inside',  # Text position inside the donut sections
+            marker=dict(colors=['#FFA07A', '#20B2AA', '#87CEFA', '#FF69B4', '#FFD700']),  # Example colors
+            hoverinfo='label+value',  # Hover information shows label and value
+            hole=0.2  # Size of the hole in the middle
+        ))
+
+        # Update layout
+        fig.update_layout(
+            title='Deposit Amount by Agent ID',
+            template='plotly_white',
+            width = 600,  # Set the width of the figure
+            height = 500  # Set the height of the figure
+        )
+
+        # Display chart in Streamlit
+        st.plotly_chart(fig)
 
     st.write(df2.reset_index(drop=True))
 

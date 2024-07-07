@@ -157,7 +157,7 @@ def home_page():
     agent_dep = df2.groupby('Agent_id')['deposit'].sum().reset_index()
 
 
-    col8, spacer, col9 = st.columns([1, 1, 1])
+    col8, col9 = st.columns([1, 1])
 
     with col8:
         # Plotly bar chart
@@ -215,7 +215,7 @@ def home_page():
 
     st.markdown('')
 
-    col10, spacer, col11 = st.columns([1, 1, 1])
+    col10, col11 = st.columns([1, 1])
     with col10:
         fig = go.Figure()
 

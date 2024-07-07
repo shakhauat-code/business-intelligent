@@ -256,7 +256,7 @@ def home_page():
             textposition='inside',  # Text position inside the donut sections
             marker=dict(colors=['#FFA07A', '#20B2AA', '#87CEFA', '#FF69B4', '#FFD700']),  # Example colors
             hoverinfo='label+value',  # Hover information shows label and value
-            hole=0.2  # Size of the hole in the middle
+            hole=0.1  # Size of the hole in the middle
         ))
 
         # Update layout

@@ -181,7 +181,9 @@ def home_page():
                 type='category'
             ),
             yaxis=dict(title='Number of Accounts'),
-            template='plotly_white'
+            template='plotly_white',
+            width = 600,  # Set the width of the figure
+            height = 600  # Set the height of the figure
         )
         # Display chart in Streamlit
         st.plotly_chart(fig)
@@ -208,7 +210,9 @@ def home_page():
                 type='category'
             ),
             yaxis=dict(title='Deposit Amount'),
-            template='plotly_white'
+            template='plotly_white',
+            width = 600,  # Set the width of the figure
+            height = 600  # Set the height of the figure
         )
         # Display chart in Streamlit
         st.plotly_chart(fig)

@@ -242,7 +242,8 @@ def home_page():
 
     st.write(df2.reset_index(drop=True))
 
-
+    st.markdown('')
+    st.markdown('')
     if st.button("Log Out"):
         st.session_state.logged_in = False
         st.session_state.page = 'Login'

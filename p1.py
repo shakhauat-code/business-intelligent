@@ -36,14 +36,7 @@ def login_page():
     login_button = st.button("Log In")
 
     if login_button:
-        if int(password) in bdex_pass.values():
-            st.session_state.logged_in = True
-            st.session_state.page = 'Home'
-            st.session_state.username = password
-            st.success("Logged in successfully!")
-            st.experimental_rerun()
-        else:
-            st.error("Invalid username or password.")
+        st.write('hello')
 
 
 def home_page():

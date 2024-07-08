@@ -29,23 +29,26 @@ if 'page' not in st.session_state:
 
 
 def login_page():
+    st.subheader('')
+    log1, log2, log3 =st.columns([1,2,1])
 
-    st.subheader("Login Page")
-    username = st.text_input("BDEx Username").strip().lower()
-    password = st.text_input("Password", type="password").strip()
-    login_button = st.button("Log In")
+    with log2:
+        username = st.text_input("BDEx Username").strip().lower()
+        password = st.text_input("Password", type="password").strip()
+        login_button = st.button("Log In")
 
-    if login_button:
-        if password == '' or re.search(r'[a-zA-Z]',password):
-            st.error("Invalid username or password.")
-        elif int(password) in bdex_pass.values():
-            st.session_state.logged_in = True
-            st.session_state.page = 'Home'
-            st.session_state.username = password
-            st.success("Logged in successfully!")
-            st.experimental_rerun()
-        else:
-            st.error("Invalid username or password.")
+        if login_button:
+            if password == '' or re.search(r'[a-zA-Z]',password):
+                st.error("Invalid username or password.")
+            elif int(password) in bdex_pass.values():
+                st.session_state.logged_in = True
+                st.session_state.page = 'Home'
+                st.session_state.username = password
+                st.success("Logged in successfully!")
+                st.experimental_rerun()
+            else:
+                st.error("Invalid username or password.")
+
 
 
 def home_page():

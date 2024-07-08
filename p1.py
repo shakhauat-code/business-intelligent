@@ -42,7 +42,7 @@ def login_page():
             st.session_state.username = password
             st.success("Logged in successfully!")
             st.experimental_rerun()
-        elif password == '':
+        else:
             st.error("Invalid username or password.")
 
 

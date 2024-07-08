@@ -30,6 +30,7 @@ if 'page' not in st.session_state:
 
 def login_page():
     st.subheader('')
+    st.subheader('')
     log1, log2, log3 =st.columns([1,2,1])
 
     with log2:
